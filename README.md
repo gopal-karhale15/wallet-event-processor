@@ -2,7 +2,7 @@
 
 A Spring Boot based Wallet Event Processor that safely processes debit transactions with **idempotency, concurrency control, transaction management, and insufficient-funds protection**.
 
-## 🚀 Features
+##  Features
 
 - Process wallet debit transactions
 - Idempotent transaction processing
@@ -18,7 +18,7 @@ A Spring Boot based Wallet Event Processor that safely processes debit transacti
 
 ---
 
-## 🛠️ Tech Stack
+## ️ Tech Stack
 
 - Java 17+
 - Spring Boot 3.5.5
@@ -32,7 +32,7 @@ A Spring Boot based Wallet Event Processor that safely processes debit transacti
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 wallet-event-processor
@@ -62,7 +62,7 @@ wallet-event-processor
 ├── mvnw
 └── mvnw.cmd
 
-🔗 API Endpoint
+ API Endpoint
 Process Transaction
 
 POST
@@ -84,7 +84,7 @@ Example:
   "transactionId": "11111111-1111-1111-1111-111111111111",
   "status": "SUCCESS"
 }
-🔐 Idempotency
+ Idempotency
 
 The system uses transactionId as a unique identifier.
 
@@ -96,7 +96,7 @@ Request 3 → CONFLICT → No deduction
 
 Therefore, the wallet balance is never deducted twice for the same transaction.
 
-🔒 Concurrency Control
+ Concurrency Control
 
 The application uses Pessimistic Database Row Locking.
 
@@ -123,7 +123,7 @@ Final balance → ₹0
 
 The balance can never become negative.
 
-💰 Insufficient Funds
+ Insufficient Funds
 
 Before processing a debit:
 
@@ -135,7 +135,7 @@ HTTP 409 Conflict
 
 The wallet balance remains unchanged.
 
-🧪 Testing
+ Testing
 
 The project includes JUnit 5 tests covering:
 
@@ -187,7 +187,7 @@ Linux / macOS:
 Application starts on:
 
 http://localhost:8080
-🧪 Run Tests
+ Run Tests
 
 Windows:
 
@@ -196,7 +196,7 @@ Windows:
 Run only transaction tests:
 
 .\mvnw.cmd -Dtest=TransactionServiceTest test
-🗄️ Database
+️ Database
 
 The project uses an H2 in-memory database.
 
@@ -218,7 +218,7 @@ sa
 
 Password:
 
-🧠 Architecture
+Architecture
 Client
   │
   ▼
@@ -239,7 +239,7 @@ TransactionService
   │
   ▼
 H2 Database
-🔄 Transaction Flow
+ Transaction Flow
 POST Request
      │
      ▼
@@ -269,7 +269,7 @@ COMMIT
      │
      ▼
 SUCCESS
-📌 Design Decisions
+ Design Decisions
 
 Detailed concurrency and implementation decisions are documented in:
 
@@ -283,12 +283,12 @@ Transaction atomicity
 Idempotency strategy
 Race condition handling
 Testing strategy
-👨‍💻 Author
+ Author
 
 Gopal Karhale
 
 Java Backend Developer | Spring Boot | SQL | REST API
 
-📄 License
+ License
 
 This project was created as part of a backend development assignment.
